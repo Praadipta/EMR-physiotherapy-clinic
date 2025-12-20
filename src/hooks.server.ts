@@ -6,10 +6,37 @@ import {
 	sessionCookieOptions
 } from '$lib/server/auth';
 
+// Allowed origins for CSRF protection
+const ALLOWED_ORIGINS = [
+	'http://localhost:3000',
+	'http://localhost:3004',
+	'http://localhost:5173',
+	'http://127.0.0.1:3000',
+	'http://127.0.0.1:3004',
+	'http://127.0.0.1:5173',
+	'https://clinic.iliterate.ai',
+	'https://amrizadi.my.id',
+	'http://srv796070.hstgr.cloud:3004',
+	'http://212.85.27.37',
+	'http://212.85.27.37:3004'
+];
+
 // Halaman yang tidak memerlukan autentikasi
 const publicRoutes = ['/auth/login', '/auth/register'];
 
 export const handle: Handle = async ({ event, resolve }) => {
+	// Custom CSRF check for multiple origins
+	if (event.request.method === 'POST' || event.request.method === 'PUT' || event.request.method === 'PATCH' || event.request.method === 'DELETE') {
+		const origin = event.request.headers.get('origin');
+		
+		// If origin header exists, validate it
+		if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+			console.warn(`Blocked request from unauthorized origin: ${origin}`);
+			return new Response('Cross-site POST form submissions are forbidden', {
+				status: 403
+			});
+		}
+	}
 	// Inisialisasi locals
 	event.locals.user = null;
 	event.locals.session = null;

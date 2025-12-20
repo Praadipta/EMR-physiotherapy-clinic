@@ -14,9 +14,9 @@ const config = {
 			precompress: false,
 			envPrefix: ''
 		}),
-		// CSRF configuration - requires ORIGIN env var to be set correctly in production
+		// Disable built-in CSRF - we handle it in hooks.server.ts with multiple origins
 		csrf: {
-			checkOrigin: true
+			checkOrigin: false
 		}
 	}
 };
