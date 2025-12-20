@@ -2,7 +2,7 @@
 # Container name: sambungnyowo
 
 $CONTAINER_NAME = "sambungnyowo"
-$IMAGE_NAME = "healtcareapp"
+$IMAGE_NAME = "sambungnyowo"
 $PORT = 3004
 
 Write-Host "🔄 Building Docker image..." -ForegroundColor Cyan

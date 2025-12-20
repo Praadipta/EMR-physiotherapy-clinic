@@ -13,7 +13,11 @@ const config = {
 			out: 'build',
 			precompress: false,
 			envPrefix: ''
-		})
+		}),
+		// CSRF configuration - requires ORIGIN env var to be set correctly in production
+		csrf: {
+			checkOrigin: true
+		}
 	}
 };
 
