@@ -1,0 +1,78 @@
+
+make App for Healthcare Provider
+
+case:
+physiotherapy clinic "Sambung Nyowo"
+
+language :
+bahasa Indonesia
+
+---------
+Functional Requirements :
+
+1. Patient Management
+Register new patients (name, DOB, gender, contact, address)
+Assign unique patient ID
+View and update patient profiles
+Search patients by name or ID
+View patient visit history
+
+2. Appointment & Scheduling
+Create and manage therapy appointments
+Assign physiotherapist to each session
+View daily and weekly schedules
+Update appointment status (scheduled, completed, canceled, no-show)
+Appointment in calendar view
+
+3. Clinical Documentation (Physiotherapy-Focused)
+Record initial assessment:
+Chief complaint
+Injury or condition
+Affected body part
+Pain scale
+Range of motion notes
+Record therapy session notes:
+Treatment provided
+Exercises performed
+Patient response
+Progress notes per session
+Simple outcome tracking (improved, unchanged, worsened)
+
+4. Treatment Plan Management
+Create treatment plans per patient
+Define goals and number of planned sessions
+Track treatment status (planned, in-progress, completed)
+Update treatment plan as needed
+
+5. Billing & Payments (Basic)
+Record therapy service charges
+Generate simple invoices
+Record payment status (paid, unpaid, partial)
+View patient payment history
+---
+6. User & Role Management
+authentication, session management, & logout function
+User roles:
+Physiotherapist
+Admin / Reception
+
+Role-based access:
+Therapists access clinical notes
+Admin manages appointments and billing
+
+---
+7. Reporting
+Daily patient visit list
+Therapist workload summary
+Basic revenue report
+---------------
+
+tech stack : web Appp
+1. db = better_sqlite3
+2. orm = drizzle
+3. web = sveltekit
+4. backend = node.js
+
+Follow Hipaa & GDPR Regulation
+keep the program simple
+Use COntext7 to read Library/Framework Docs

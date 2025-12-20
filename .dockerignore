@@ -1,0 +1,44 @@
+# Dependencies
+node_modules
+
+# Build output
+build
+.svelte-kit
+
+# Development files
+.git
+.gitignore
+*.md
+.vscode
+.idea
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Database files (will be created in container)
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test files
+*.test.*
+*.spec.*
+__tests__
+coverage
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files (no need to copy these into the image)
+Dockerfile*
+docker-compose*
+.docker
