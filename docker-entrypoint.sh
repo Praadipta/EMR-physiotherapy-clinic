@@ -46,11 +46,11 @@ async function init() {
             alamat TEXT,
             kontak_darurat TEXT,
             telepon_darurat TEXT,
-            catatan_medis TEXT,
             persetujuan_diberikan INTEGER DEFAULT 0,
             tanggal_persetujuan TEXT,
             created_at TEXT,
-            updated_at TEXT
+            updated_at TEXT,
+            created_by INTEGER REFERENCES users(id)
         );
 
         CREATE TABLE IF NOT EXISTS appointments (
