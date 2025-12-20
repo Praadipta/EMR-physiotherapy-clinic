@@ -3,13 +3,14 @@ import { fail, redirect, isRedirect } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
 import { patients } from '$lib/server/db/schema';
 import { logAudit } from '$lib/server/services/audit';
-import { count } from 'drizzle-orm';
+import { sql } from 'drizzle-orm';
 
 // Generate unique patient ID format: PT-YYYY-NNNNN
 async function generatePatientId(): Promise<string> {
 	const year = new Date().getFullYear();
-	const [result] = await db.select({ count: count() }).from(patients);
-	const sequence = (result.count || 0) + 1;
+	// Use MAX(id) instead of COUNT to avoid race conditions
+	const [result] = await db.select({ maxId: sql<number>`COALESCE(MAX(id), 0)` }).from(patients);
+	const sequence = (result.maxId || 0) + 1;
 	return `PT-${year}-${String(sequence).padStart(5, '0')}`;
 }
 
