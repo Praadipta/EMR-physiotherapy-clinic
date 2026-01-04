@@ -13,6 +13,16 @@ export const patients = sqliteTable('patients', {
 	alamat: text('alamat'),
 	kontakDarurat: text('kontak_darurat'),
 	teleponDarurat: text('telepon_darurat'),
+
+	// Clinical Information
+	bloodType: text('blood_type', {
+		enum: ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-', 'unknown']
+	}).default('unknown'),
+	allergies: text('allergies'),                    // JSON array: [{allergen, severity, reaction}]
+	medicalHistory: text('medical_history'),         // JSON object: {conditions, surgeries, familyHistory}
+	currentMedications: text('current_medications'), // JSON array: [{name, dosage, frequency}]
+	emergencyNotes: text('emergency_notes'),         // Important notes for emergency
+
 	// GDPR Compliance
 	persetujuanDiberikan: integer('persetujuan_diberikan', { mode: 'boolean' }).default(false),
 	tanggalPersetujuan: text('tanggal_persetujuan'),

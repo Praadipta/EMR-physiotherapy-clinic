@@ -11,6 +11,10 @@
 		{ href: '/appointments', label: 'Jadwal', icon: '📅' },
 		{ href: '/clinical', label: 'Klinis', icon: '📋' },
 		{ href: '/treatments', label: 'Perawatan', icon: '💊' },
+		{ href: '/exercises', label: 'Latihan', icon: '🏋️' },
+		{ href: '/templates', label: 'Template', icon: '📝' },
+		{ href: '/referrals', label: 'Rujukan', icon: '🔄' },
+		{ href: '/icd10', label: 'ICD-10', icon: '🏥' },
 		{ href: '/billing', label: 'Billing', icon: '💰' },
 		{ href: '/reports', label: 'Laporan', icon: '📊' }
 	];

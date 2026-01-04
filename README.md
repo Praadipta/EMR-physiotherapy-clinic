@@ -1,118 +1,189 @@
-# 🏥 Sambung Nyowo - Sistem Informasi Klinik Fisioterapi
+# 🏥 Sambung Nyowo EMR - Physiotherapy Clinic System
 
 <div align="center">
 
-![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
+![SvelteKit](https://img.shields.io/badge/SvelteKit_2.x-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
+![Svelte 5](https://img.shields.io/badge/Svelte_5_(Runes)-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Drizzle](https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=for-the-badge&logo=drizzle&logoColor=black)
 
-**Aplikasi Web Manajemen Klinik Fisioterapi dengan Standar HIPAA & GDPR**
+### **Full-Featured Electronic Medical Record for Physiotherapy Clinics**
 
-[Demo](#demo) • [Fitur](#-fitur-utama) • [Instalasi](#-instalasi) • [Dokumentasi](#-dokumentasi)
+*HIPAA & GDPR Compliant • ICD-10 Diagnosis Codes • SOAP Documentation*
+
+[🚀 Quick Start](#-quick-start) • [✨ Features](#-features) • [📖 Documentation](#-documentation) • [🏗️ Architecture](#-architecture)
 
 </div>
 
 ---
 
-## 📋 Deskripsi
+## 📋 Overview
 
-**Sambung Nyowo** adalah sistem informasi manajemen klinik fisioterapi berbasis web yang dirancang untuk membantu klinik fisioterapi dalam mengelola operasional sehari-hari. Aplikasi ini dibangun dengan fokus pada kepatuhan regulasi kesehatan (HIPAA & GDPR), kemudahan penggunaan, dan efisiensi alur kerja klinis.
+**Sambung Nyowo EMR** is a comprehensive, production-ready Electronic Medical Record system specifically designed for physiotherapy clinics. Built with modern web technologies, it provides everything needed for clinical documentation, patient management, and practice operations.
 
-### 🎯 Tujuan Aplikasi
+### 🎯 Key Highlights
 
-- Digitalisasi rekam medis pasien fisioterapi
-- Manajemen jadwal dan appointment yang efisien
-- Dokumentasi klinis dengan format SOAP standar
-- Pengelolaan billing dan pembayaran terintegrasi
-- Audit trail untuk kepatuhan regulasi kesehatan
+| Feature | Description |
+|---------|-------------|
+| 🏥 **Complete EMR** | Patient records, clinical notes, vital signs, assessments |
+| 🔢 **ICD-10 Codes** | 89 physiotherapy-specific diagnosis codes with Indonesian translations |
+| 📝 **SOAP Documentation** | Standardized clinical note templates |
+| 📊 **Assessment Tools** | VAS pain scale, body diagram, goal tracking |
+| 💰 **Billing Integration** | Invoice generation and payment tracking |
+| 🔐 **Secure & Compliant** | Role-based access, audit trails, encrypted passwords |
 
 ---
 
-## ✨ Fitur Utama
+## ✨ Features
 
-### 👥 Manajemen Pasien
-- Registrasi pasien baru dengan persetujuan GDPR
-- Pencarian dan filter data pasien
-- Riwayat medis lengkap per pasien
-- Manajemen kontak darurat
+### 👥 Patient Management
+- ✅ Complete patient registration with demographics
+- ✅ Allergy alerts with severity levels
+- ✅ Current medications tracking
+- ✅ Medical history (conditions, surgeries, family history)
+- ✅ Emergency contacts
+- ✅ GDPR consent management
 
-### 📅 Manajemen Appointment
-- Penjadwalan sesi terapi
-- Kalender interaktif per fisioterapis
-- Status appointment (dijadwalkan, selesai, dibatalkan, tidak hadir)
-- Notifikasi dan reminder
+### ❤️ Vital Signs Recording
+- ✅ Blood pressure (with status indicators)
+- ✅ Heart rate, temperature, respiratory rate
+- ✅ SpO2 oxygen saturation
+- ✅ Weight, height, BMI calculation
+- ✅ Pain level (0-10 scale)
+- ✅ Complete vitals history
 
-### 📋 Dokumentasi Klinis
-- **Assessment Awal**: Penilaian kondisi pasien pertama kali
-- **Catatan Sesi (SOAP)**: Dokumentasi standar setiap sesi terapi
-  - **S**ubjective: Keluhan pasien
-  - **O**bjective: Temuan klinis objektif
-  - **A**ssessment: Penilaian kondisi
-  - **P**lan: Rencana tindakan
-- Pencatatan skala nyeri (0-10)
-- Range of Motion (ROM) notes
+### 🏥 ICD-10 Diagnosis Codes
+- ✅ **89 physiotherapy codes** across 7 categories:
+  - **M codes**: Musculoskeletal (46 codes)
+  - **S codes**: Injuries (11 codes)
+  - **G codes**: Nervous system (14 codes)
+  - **I/J/R/Z codes**: Circulatory, respiratory, symptoms
+- ✅ Searchable selector with autocomplete
+- ✅ Indonesian translations for all codes
+- ✅ "Common" markers for frequently used diagnoses
 
-### 💊 Rencana Perawatan (Treatment Plans)
-- Pembuatan rencana terapi jangka panjang
-- Tracking progress sesi terapi
-- Status perawatan (direncanakan, berlangsung, selesai, dihentikan)
-- Target dan tujuan terapi
+### 📋 Clinical Documentation
+- ✅ **SOAP Notes** (Subjective, Objective, Assessment, Plan)
+- ✅ 6 pre-built clinical templates
+- ✅ Assessment records with ROM notes
+- ✅ Session documentation with duration tracking
 
-### 💰 Billing & Pembayaran
-- Pembuatan invoice otomatis
-- Multiple metode pembayaran (Tunai, Transfer, Debit, Kredit, QRIS)
-- Tracking status pembayaran (belum bayar, sebagian, lunas)
-- Laporan keuangan
+### 📊 Assessment Tools
+- ✅ **VAS Pain Scale** - Interactive 0-10 scale
+- ✅ **Body Diagram** - Mark pain/injury locations
+- ✅ **Goal Tracking** - Progress monitoring with targets
+- ✅ Outcome measures (DASH, ODI, WOMAC, SF-36 placeholders)
 
-### 📊 Laporan & Analytics
-- Dashboard metrik klinik
-- Statistik kunjungan harian/bulanan
-- Performa fisioterapis
-- Diagnosis tersering
-- Pendapatan bulanan
+### 📂 Document Management
+- ✅ File uploads with categorization
+- ✅ Categories: Lab results, imaging, consent forms, etc.
+- ✅ Secure file storage
 
-### 🔐 Keamanan & Compliance
-- Role-based access control (Admin, Fisioterapis)
-- Session management dengan token aman
-- Audit log untuk setiap aksi
-- Enkripsi password dengan Argon2
-- GDPR consent management
+### 📅 Appointments
+- ✅ Appointment scheduling
+- ✅ Status tracking (scheduled, completed, cancelled, no-show)
+- ✅ Appointment history per patient
+
+### 🔄 Referral Management
+- ✅ Incoming and outgoing referrals
+- ✅ Referrer/referee information
+- ✅ Status tracking (pending, accepted, completed)
+
+### 🏋️ Exercise Library
+- ✅ 15+ physiotherapy exercises
+- ✅ Categorized by body region
+- ✅ Difficulty levels
+- ✅ Instructions and sets/reps
+
+### 💰 Billing
+- ✅ Invoice generation
+- ✅ Payment tracking
+- ✅ Multiple payment methods (Cash, Transfer, Debit, Credit, QRIS)
+
+### 📊 Reports & Analytics
+- ✅ Dashboard with key metrics
+- ✅ Patient statistics
+- ✅ Appointment analytics
+
+### 🔐 Security
+- ✅ Role-based access control (Admin, Physio, Staff)
+- ✅ Argon2 password hashing
+- ✅ Session-based authentication
+- ✅ Audit trail for all actions
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- **Node.js 18+**
+- **npm** or **pnpm**
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Praadipta/EMR-physiotherapy-clinic.git
+cd EMR-physiotherapy-clinic
+
+# 2. Install dependencies
+npm install
+
+# 3. Setup database schema
+npm run db:push
+
+# 4. Seed initial data (optional but recommended)
+npm run seed
+
+# 5. Seed ICD-10 codes
+npx tsx scripts/seed-icd10.ts
+
+# 6. Start development server
+npm run dev
+```
+
+### Access the Application
+
+Open **http://localhost:5173** in your browser.
+
+#### Default Login Credentials
+| Role | Username | Password |
+|------|----------|----------|
+| Admin | `admin` | `admin123` |
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer | Teknologi |
-|-------|-----------|
-| **Frontend** | SvelteKit 2.x, Svelte 5 (Runes), TailwindCSS 4 |
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | SvelteKit 2.x, Svelte 5 (Runes) |
+| **Styling** | TailwindCSS 4 |
 | **Backend** | SvelteKit Server (Node.js) |
-| **Database** | SQLite dengan better-sqlite3 |
+| **Database** | SQLite with better-sqlite3 |
 | **ORM** | Drizzle ORM |
-| **Authentication** | Custom session-based auth dengan Argon2 |
+| **Auth** | Custom session-based with Argon2 |
 | **Language** | TypeScript |
 
 ---
 
-## 🏗 Arsitektur Sistem
+## 🏗 Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                         CLIENT BROWSER                          │
-│                    (Svelte 5 + TailwindCSS)                     │
+│                    (Svelte 5 + TailwindCSS 4)                   │
 └─────────────────────────────────────────────────────────────────┘
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                      SVELTEKIT SERVER                           │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐  │
-│  │   Routes    │  │   Hooks     │  │     Server Load         │  │
-│  │  +page.ts   │  │  Auth       │  │     Functions           │  │
+│  │   Routes    │  │   Hooks     │  │     Server Actions      │  │
+│  │  +page.ts   │  │  Auth Guard │  │     Form Handling       │  │
 │  └─────────────┘  └─────────────┘  └─────────────────────────┘  │
-│  ┌─────────────────────────────────────────────────────────────┐│
-│  │                    SERVICES LAYER                           ││
-│  │  • Auth Service    • Audit Service    • Business Logic     ││
-│  └─────────────────────────────────────────────────────────────┘│
 └─────────────────────────────────────────────────────────────────┘
                                 │
                                 ▼
@@ -124,452 +195,107 @@
                                 ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                     SQLITE DATABASE                             │
-│              (./data/healthcare.db)                             │
-└─────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 📐 Database Schema (ERD)
-
-```
-┌──────────────────┐       ┌──────────────────┐       ┌──────────────────┐
-│      USERS       │       │     PATIENTS     │       │   APPOINTMENTS   │
-├──────────────────┤       ├──────────────────┤       ├──────────────────┤
-│ id (PK)          │       │ id (PK)          │       │ id (PK)          │
-│ username         │       │ patientId        │◄──────│ patientId (FK)   │
-│ email            │       │ namaLengkap      │       │ fisioterapisId(FK)│
-│ passwordHash     │       │ tanggalLahir     │       │ tanggalWaktu     │
-│ role             │◄──┬───│ jenisKelamin     │       │ durasiMenit      │
-│ namaLengkap      │   │   │ noTelepon        │       │ status           │
-│ isActive         │   │   │ email            │       │ catatan          │
-└──────────────────┘   │   │ alamat           │       └──────────────────┘
-         │             │   │ persetujuanGDPR  │                │
-         │             │   │ createdBy (FK)   │────┘           │
-         │             │   └──────────────────┘                │
-         │             │            │                          │
-         │             │            │                          │
-         ▼             │            ▼                          ▼
-┌──────────────────┐   │   ┌──────────────────┐       ┌──────────────────┐
-│   AUDIT_LOGS     │   │   │   ASSESSMENTS    │       │  SESSION_NOTES   │
-├──────────────────┤   │   ├──────────────────┤       ├──────────────────┤
-│ id (PK)          │   │   │ id (PK)          │       │ id (PK)          │
-│ userId (FK)      │───┘   │ patientId (FK)   │       │ appointmentId(FK)│
-│ aksi             │       │ fisioterapisId   │       │ patientId (FK)   │
-│ namaTabel        │       │ tanggalAssessment│       │ fisioterapisId   │
-│ recordId         │       │ keluhanUtama     │       │ tanggalSesi      │
-│ nilaiLama        │       │ kondisiCedera    │       │ subjective (SOAP)│
-│ nilaiBaru        │       │ skalaNyeri       │       │ objective (SOAP) │
-│ ipAddress        │       │ catatanROM       │       │ assessment (SOAP)│
-│ timestamp        │       └──────────────────┘       │ plan (SOAP)      │
-└──────────────────┘                                  │ tindakanDilakukan│
-                                                      └──────────────────┘
-         
-┌──────────────────┐       ┌──────────────────┐       ┌──────────────────┐
-│ TREATMENT_PLANS  │       │     INVOICES     │       │    PAYMENTS      │
-├──────────────────┤       ├──────────────────┤       ├──────────────────┤
-│ id (PK)          │       │ id (PK)          │       │ id (PK)          │
-│ patientId (FK)   │       │ nomorInvoice     │◄──────│ invoiceId (FK)   │
-│ fisioterapisId   │       │ patientId (FK)   │       │ jumlah           │
-│ diagnosis        │       │ appointmentId(FK)│       │ metodePembayaran │
-│ tujuan           │       │ jumlah           │       │ tanggalPembayaran│
-│ jumlahSesi       │       │ deskripsi        │       │ diterimaOleh(FK) │
-│ jumlahSelesai    │       │ status           │       │ catatan          │
-│ status           │       │ tanggalTerbit    │       └──────────────────┘
-│ tanggalMulai     │       │ tanggalJatuhTempo│
-│ tanggalSelesai   │       └──────────────────┘
-└──────────────────┘
-```
-
----
-
-## 🔄 Application Workflow
-
-### Alur Kerja Keseluruhan
-
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                        ALUR KERJA KLINIK                                │
-└─────────────────────────────────────────────────────────────────────────┘
-                                    │
-        ┌───────────────────────────┼───────────────────────────┐
-        ▼                           ▼                           ▼
-┌───────────────┐          ┌───────────────┐          ┌───────────────┐
-│   REGISTRASI  │          │  PENJADWALAN  │          │   BILLING     │
-│    PASIEN     │─────────►│  APPOINTMENT  │─────────►│  & PAYMENT    │
-└───────────────┘          └───────────────┘          └───────────────┘
-        │                           │                           │
-        │                           ▼                           │
-        │                  ┌───────────────┐                    │
-        │                  │   ASSESSMENT  │                    │
-        │                  │     AWAL      │                    │
-        │                  └───────────────┘                    │
-        │                           │                           │
-        │                           ▼                           │
-        │                  ┌───────────────┐                    │
-        │                  │   TREATMENT   │                    │
-        │                  │     PLAN      │                    │
-        │                  └───────────────┘                    │
-        │                           │                           │
-        │                           ▼                           │
-        │                  ┌───────────────┐                    │
-        │                  │ SESI TERAPI   │                    │
-        │                  │ (SOAP Notes)  │◄───────────────────┘
-        │                  └───────────────┘
-        │                           │
-        │                           ▼
-        │                  ┌───────────────┐
-        └─────────────────►│   EVALUASI    │
-                           │  & LAPORAN    │
-                           └───────────────┘
-```
-
----
-
-## 👤 User Flow Diagrams
-
-### 🧑‍⚕️ Alur Fisioterapis (Staff)
-
-```
-                            ┌─────────────┐
-                            │    LOGIN    │
-                            └──────┬──────┘
-                                   │
-                                   ▼
-                          ┌────────────────┐
-                          │   DASHBOARD    │
-                          │  (Home Page)   │
-                          └────────┬───────┘
-                                   │
-           ┌───────────────────────┼───────────────────────┐
-           │                       │                       │
-           ▼                       ▼                       ▼
-   ┌───────────────┐      ┌───────────────┐       ┌───────────────┐
-   │   PATIENTS    │      │ APPOINTMENTS  │       │   CLINICAL    │
-   │   MENU        │      │    MENU       │       │    MENU       │
-   └───────┬───────┘      └───────┬───────┘       └───────┬───────┘
-           │                      │                       │
-    ┌──────┴──────┐        ┌──────┴──────┐        ┌──────┴──────┐
-    │             │        │             │        │             │
-    ▼             ▼        ▼             ▼        ▼             ▼
-┌────────┐  ┌────────┐ ┌────────┐  ┌────────┐ ┌────────┐  ┌────────┐
-│ Daftar │  │ Tambah │ │ Lihat  │  │ Buat   │ │Assessment│ │Session │
-│ Pasien │  │ Pasien │ │ Jadwal │  │Jadwal  │ │  Awal   │  │ Notes  │
-└────┬───┘  └────────┘ └────┬───┘  └────────┘ └────┬───┘  └────┬───┘
-     │                      │                      │           │
-     ▼                      ▼                      │           │
-┌────────┐           ┌────────────┐               │           │
-│ Detail │           │   Update   │               │           │
-│ Pasien │           │   Status   │               │           │
-└────┬───┘           │ (Selesai/  │               │           │
-     │               │  Batal)    │               │           │
-     │               └────────────┘               │           │
-     │                                            │           │
-     └────────────────────┬───────────────────────┴───────────┘
-                          │
-                          ▼
-                  ┌───────────────┐
-                  │   TREATMENT   │
-                  │    PLANS      │
-                  └───────┬───────┘
-                          │
-               ┌──────────┴──────────┐
-               │                     │
-               ▼                     ▼
-        ┌────────────┐        ┌────────────┐
-        │  Buat Plan │        │ Update     │
-        │   Baru     │        │ Progress   │
-        └────────────┘        └────────────┘
-```
-
-### 📋 Alur Dokumentasi Klinis (SOAP)
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    PROSES DOKUMENTASI SOAP                      │
-└─────────────────────────────────────────────────────────────────┘
-
-     ┌──────────────────┐
-     │ Pasien Datang    │
-     │ untuk Sesi       │
-     └────────┬─────────┘
-              │
-              ▼
-     ┌──────────────────┐
-     │   Buka Record    │
-     │     Pasien       │
-     └────────┬─────────┘
-              │
-              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                         SOAP FORMAT                             │
-├─────────────────────────────────────────────────────────────────┤
+│                  (./data/healthcare.db)                         │
 │                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ S - SUBJECTIVE                                          │   │
-│  │ • Keluhan pasien hari ini                               │   │
-│  │ • Perkembangan sejak sesi terakhir                      │   │
-│  │ • Tingkat nyeri yang dirasakan                          │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                           │                                     │
-│                           ▼                                     │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ O - OBJECTIVE                                           │   │
-│  │ • Hasil pemeriksaan fisik                               │   │
-│  │ • Pengukuran ROM (Range of Motion)                      │   │
-│  │ • Skala nyeri objektif (0-10)                           │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                           │                                     │
-│                           ▼                                     │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ A - ASSESSMENT                                          │   │
-│  │ • Analisis kondisi pasien                               │   │
-│  │ • Evaluasi progres terapi                               │   │
-│  │ • Identifikasi masalah baru                             │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                           │                                     │
-│                           ▼                                     │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ P - PLAN                                                │   │
-│  │ • Rencana tindakan sesi berikutnya                      │   │
-│  │ • Latihan rumah untuk pasien                            │   │
-│  │ • Rekomendasi & edukasi                                 │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                                                                 │
+│   13 Tables: patients, users, appointments, vitals,            │
+│   assessments, session_notes, treatments, billing, referrals,  │
+│   templates, exercises, icd10_codes, audit_logs                │
 └─────────────────────────────────────────────────────────────────┘
-              │
-              ▼
-     ┌──────────────────┐
-     │   Simpan Note    │
-     │   & Update       │
-     │   Treatment Plan │
-     └────────┬─────────┘
-              │
-              ▼
-     ┌──────────────────┐
-     │  Buat Invoice    │
-     │   (Opsional)     │
-     └──────────────────┘
-```
-
-### 💰 Alur Billing & Pembayaran
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                      PROSES BILLING                             │
-└─────────────────────────────────────────────────────────────────┘
-
-     ┌──────────────────┐
-     │  Sesi Selesai    │
-     └────────┬─────────┘
-              │
-              ▼
-     ┌──────────────────┐
-     │   Buat Invoice   │
-     │   (INV-YYYY-XXX) │
-     └────────┬─────────┘
-              │
-              ├───────────────────────────────────────┐
-              │                                       │
-              ▼                                       ▼
-     ┌──────────────────┐                   ┌──────────────────┐
-     │  Input Detail:   │                   │ Status Invoice:  │
-     │  • Jumlah        │                   │  • belum_bayar   │
-     │  • Deskripsi     │                   │  • sebagian      │
-     │  • Jatuh Tempo   │                   │  • lunas         │
-     └────────┬─────────┘                   └──────────────────┘
-              │
-              ▼
-     ┌──────────────────┐
-     │  Pasien Bayar    │
-     └────────┬─────────┘
-              │
-              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                     METODE PEMBAYARAN                           │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│   ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐  │
-│   │  TUNAI  │ │TRANSFER │ │  DEBIT  │ │ KREDIT  │ │  QRIS   │  │
-│   └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘  │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-              │
-              ▼
-     ┌──────────────────┐
-     │  Catat Payment   │
-     │  & Update Status │
-     └────────┬─────────┘
-              │
-              ▼
-     ┌──────────────────┐
-     │  Generate        │
-     │  Receipt         │
-     └──────────────────┘
 ```
 
 ---
 
-## 🚀 Instalasi
-
-### Prerequisites
-
-- Node.js 18+ 
-- npm atau pnpm
-
-### Langkah Instalasi
-
-```bash
-# 1. Clone repository
-git clone https://github.com/your-repo/sambung-nyowo.git
-cd sambung-nyowo
-
-# 2. Install dependencies
-npm install
-
-# 3. Setup database
-npm run db:push
-
-# 4. Seed data awal (opsional)
-npm run seed
-
-# 5. Jalankan development server
-npm run dev
-```
-
-### Environment Variables
-
-Buat file `.env` di root project:
-
-```env
-# Database
-DATABASE_URL=./data/healthcare.db
-
-# Session
-SESSION_SECRET=your-super-secret-key-min-32-chars
-```
-
----
-
-## 📁 Struktur Project
+## 📁 Project Structure
 
 ```
 src/
-├── app.css                    # Global styles (TailwindCSS)
-├── app.html                   # HTML template
-├── hooks.server.ts            # Server hooks (auth middleware)
 ├── lib/
-│   ├── assets/               # Static assets
-│   ├── index.ts              # Shared utilities
+│   ├── components/           # Reusable Svelte components
+│   │   ├── BodyDiagram.svelte
+│   │   ├── VASPainScale.svelte
+│   │   ├── GoalProgress.svelte
+│   │   ├── ICD10Selector.svelte
+│   │   └── DocumentManager.svelte
 │   └── server/
 │       ├── auth/             # Authentication logic
-│       ├── db/
-│       │   ├── index.ts      # Database connection
-│       │   └── schema/       # Drizzle schema definitions
-│       │       ├── appointments.ts
-│       │       ├── audit.ts
-│       │       ├── billing.ts
-│       │       ├── clinical.ts
-│       │       ├── patients.ts
-│       │       ├── treatments.ts
-│       │       └── users.ts
-│       └── services/         # Business logic services
-│           └── audit.ts      # Audit logging
+│       └── db/
+│           ├── index.ts      # Database connection
+│           └── schema/       # 13 Drizzle schema files
 └── routes/
-    ├── +layout.server.ts     # Root layout server
-    ├── +layout.svelte        # Root layout component
-    ├── +page.server.ts       # Dashboard server
-    ├── +page.svelte          # Dashboard UI
-    ├── appointments/         # Appointment management
-    ├── auth/                 # Login/Logout
-    ├── billing/              # Invoice & payments
-    ├── clinical/             # Assessments & session notes
-    │   ├── assessments/
-    │   └── sessions/
     ├── patients/             # Patient management
-    ├── reports/              # Analytics & reports
-    └── treatments/           # Treatment plans
+    ├── appointments/         # Scheduling
+    ├── clinical/             # Assessments & notes
+    ├── treatments/           # Treatment plans
+    ├── exercises/            # Exercise library
+    ├── icd10/                # ICD-10 code browser
+    ├── templates/            # SOAP templates
+    ├── referrals/            # Referral management
+    ├── billing/              # Invoicing
+    ├── reports/              # Analytics
+    └── staff/                # Staff management (admin)
 ```
 
 ---
 
-## 🔧 Scripts
+## 🔧 Available Scripts
 
-| Script | Deskripsi |
-|--------|-----------|
-| `npm run dev` | Jalankan development server |
-| `npm run build` | Build untuk production |
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
 | `npm run preview` | Preview production build |
-| `npm run check` | TypeScript & Svelte check |
-| `npm run db:generate` | Generate database migrations |
-| `npm run db:push` | Push schema ke database |
-| `npm run db:studio` | Buka Drizzle Studio |
-| `npm run seed` | Seed database dengan data awal |
+| `npm run check` | TypeScript & Svelte type checking |
+| `npm run db:push` | Push schema to database |
+| `npm run db:studio` | Open Drizzle Studio |
+| `npm run seed` | Seed database with sample data |
 
 ---
 
 ## 👥 User Roles
 
-### Admin
-- Full access ke semua fitur
-- Manajemen user (tambah/edit/hapus staff)
-- Akses laporan keuangan lengkap
-- Audit log viewer
-
-### Fisioterapis
-- Manajemen pasien (CRUD)
-- Penjadwalan appointment
-- Dokumentasi klinis (Assessment, SOAP)
-- Membuat treatment plans
-- Membuat invoice & menerima pembayaran
+| Role | Permissions |
+|------|-------------|
+| **Admin** | Full access, staff management, audit logs |
+| **Fisioterapis** | Patients, appointments, clinical docs, billing |
+| **Staff** | Limited access (coming soon) |
 
 ---
 
 ## 🔒 Security Features
 
-### Authentication
-- Session-based authentication
-- Password hashing dengan Argon2
-- Secure HTTP-only cookies
-- Automatic session expiration
-
-### Authorization
-- Role-based access control (RBAC)
-- Route protection via hooks
-- API endpoint protection
-
-### Audit & Compliance
-- Comprehensive audit logging
-- IP address tracking
-- User action history
-- GDPR consent management
-- Data retention compliance
+- ✅ **Password Hashing**: Argon2 algorithm
+- ✅ **Session Management**: Secure HTTP-only cookies
+- ✅ **RBAC**: Role-based access control
+- ✅ **Audit Trail**: All actions logged
+- ✅ **Route Protection**: Server-side guards
+- ✅ **GDPR Consent**: Patient consent management
 
 ---
 
-## 📊 Metrik Dashboard
+## 📊 EMR Compliance
 
-Dashboard menampilkan metrik real-time:
+This system meets core EMR requirements:
 
-- 📈 Total pasien & pasien baru bulan ini
-- 📅 Sesi terapi bulan ini (selesai/dibatalkan)
-- 💰 Pendapatan bulan ini
-- 📋 Tagihan belum lunas
-- 💊 Terapi aktif
-- 📊 Grafik kunjungan harian
-- 📈 Grafik pendapatan bulanan
-- 🏆 Performa fisioterapis
-- 🩺 Diagnosis tersering
+| Requirement | Status |
+|-------------|--------|
+| Patient Demographics | ✅ Complete |
+| Clinical Documentation | ✅ SOAP Notes |
+| Vital Signs | ✅ Full Recording |
+| Diagnosis Coding | ✅ ICD-10 (89 codes) |
+| Treatment Plans | ✅ Implemented |
+| Appointments | ✅ Scheduling |
+| Billing | ✅ Invoicing |
+| Security | ✅ RBAC, Audit |
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork repository
-2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buka Pull Request
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
@@ -579,20 +305,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 📞 Contact
-
-**Klinik Fisioterapi Sambung Nyowo**
-
-- 📧 Email: info@sambungnyowo.com
-- 📱 Phone: (024) xxx-xxxx
-- 📍 Address: Solo, Jawa Tengah, Indonesia
-
----
-
 <div align="center">
 
-**Made with ❤️ for Klinik Fisioterapi Sambung Nyowo**
+**Made with ❤️ for Physiotherapy Clinics**
 
-*Sistem Informasi Medis - UMS Semester 7*
+*Klinik Fisioterapi Sambung Nyowo - Solo, Indonesia*
+
+![GitHub stars](https://img.shields.io/github/stars/Praadipta/EMR-physiotherapy-clinic?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Praadipta/EMR-physiotherapy-clinic?style=social)
 
 </div>
